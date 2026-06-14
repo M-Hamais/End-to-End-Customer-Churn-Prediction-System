@@ -184,6 +184,9 @@ html, body, [class*="css"] {
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 600;
+    display: inline-block;
+    line-height: 1.3 !important;
+    text-align: center;
 }
 
 .winner-lr-tag {
@@ -193,6 +196,16 @@ html, body, [class*="css"] {
     border-radius: 4px;
     font-size: 0.8rem;
     font-weight: 600;
+    display: inline-block;
+    line-height: 1.3 !important;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .winner-lr-tag, .winner-tag {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+    }
 }
 
 /* Custom spacing and header styling */
