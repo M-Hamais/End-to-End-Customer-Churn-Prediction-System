@@ -262,6 +262,16 @@ html, body, [class*="css"] {
     line-height: 1.4;
 }
 
+/* Vertical line divider between minus and plus buttons inside st.number_input */
+div[data-testid="stNumberInputContainer"] button[data-testid="stNumberInputStepDown"],
+div[data-testid="stNumberInputContainer"] button.step-down,
+button[data-testid="stNumberInputStepDown"],
+button.step-down {
+    border-right: 1px solid rgba(128, 128, 128, 0.4) !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
 </style>
 """
 st.markdown(CSS_STYLE, unsafe_allow_html=True)
