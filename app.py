@@ -775,7 +775,7 @@ with tab2:
             return fig
             
         fig_metrics = make_comparison_chart(lr_metrics, knn_metrics)
-        st.pyplot(fig_metrics, width="stretch")
+        st.pyplot(fig_metrics, use_container_width=True)
         
     with col_heatmaps:
         # Confusion Matrices Section
@@ -830,10 +830,10 @@ with tab2:
         cm1, cm2 = st.columns(2)
         with cm1:
             fig_cm_lr = make_cm_heatmap(lr_metrics["cm"], "Logistic Regression")
-            st.pyplot(fig_cm_lr, width="stretch")
+            st.pyplot(fig_cm_lr, use_container_width=True)
         with cm2:
             fig_cm_knn = make_cm_heatmap(knn_metrics["cm"], "KNN (K=5)", is_knn=True)
-            st.pyplot(fig_cm_knn, width="stretch")
+            st.pyplot(fig_cm_knn, use_container_width=True)
             
     # Narrative Analysis of Results
     st.markdown("<br>", unsafe_allow_html=True)
