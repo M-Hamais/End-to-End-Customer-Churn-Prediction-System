@@ -152,21 +152,29 @@ html, body, [class*="css"] {
 .comparison-table th {
     background-color: #1A1D27;
     border-bottom: 2px solid #2A2D3A;
+    border-right: 1px solid #2A2D3A;
     color: #E8E8EC;
     padding: 14px 12px;
     text-align: left;
     font-weight: 600;
 }
+.comparison-table th:first-child {
+    border-left: 1px solid #2A2D3A;
+}
 
 .comparison-table td {
     padding: 14px 12px;
     border-bottom: 1px solid #2A2D3A;
-    color: #8A8D9A;
+    border-right: 1px solid #2A2D3A;
+    color: var(--text-color);
+}
+.comparison-table td:first-child {
+    border-left: 1px solid #2A2D3A;
 }
 
 .comparison-table tr:hover td {
-    color: #E8E8EC;
-    background-color: rgba(108, 99, 255, 0.03);
+    color: var(--text-color);
+    background-color: rgba(108, 99, 255, 0.08);
 }
 
 .winner-tag {
@@ -191,14 +199,13 @@ html, body, [class*="css"] {
 .main-title {
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(90deg, #E8E8EC 0%, #8A82FF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color);
     margin-bottom: 5px;
 }
 
 .sub-title {
-    color: #8A8D9A;
+    color: var(--text-color);
+    opacity: 0.85;
     font-size: 1rem;
     margin-bottom: 30px;
 }
@@ -250,7 +257,7 @@ html, body, [class*="css"] {
     color: #FF4B4B;
 }
 .rec-text {
-    color: #E8E8EC;
+    color: var(--text-color);
     font-size: 0.95rem;
     line-height: 1.4;
 }
@@ -581,7 +588,7 @@ with tab1:
             <div class="verdict-card {card_class}">
                 <div class="verdict-label">{model_name} Prediction</div>
                 <div class="{value_class}">{verdict}</div>
-                <div style="color: #E8E8EC; font-size: 0.95rem;">
+                <div style="color: var(--text-color); opacity: 0.8; font-size: 0.95rem;">
                     <strong>Cancellation Risk Level:</strong> {percentage}%
                 </div>
                 <div class="progress-container">
@@ -645,7 +652,7 @@ with tab1:
 # =========================================================================
 with tab2:
     st.subheader("📊 Model Performance Summary")
-    st.caption("Below is a side-by-side evaluation comparison of Logistic Regression and KNN on the 20% stratified test set.")
+    st.markdown("<p style='color: var(--text-color); opacity: 0.85; font-size: 0.95rem; margin-top: -5px; margin-bottom: 15px;'>Below is a side-by-side evaluation comparison of Logistic Regression and KNN on the 20% stratified test set.</p>", unsafe_allow_html=True)
     
     # 1. Custom Rendered Comparison Table
     def get_comparison_table_html(lr, knn):
