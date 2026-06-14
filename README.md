@@ -1,6 +1,6 @@
 # 🔮 Customer Retention AI Dashboard (Telco Customer Churn Prediction)
 
-### 🔗 **<a href="https://end-to-end-customer-churn-prediction-system-1.streamlit.app/" target="_blank">Launch Live Dashboard 🚀</a>** *(opens in a new tab)*
+### 🔗 **<a href="https://end-to-end-customer-churn-prediction-system-1.streamlit.app/" target="_blank">Launch Live Dashboard 🚀</a>**
 
 ---
 
