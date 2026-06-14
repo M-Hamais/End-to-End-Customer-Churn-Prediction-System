@@ -840,8 +840,8 @@ with tab2:
     st.subheader("💡 Analytical Findings & Model Differences")
     st.markdown(
         """
-        - **🏆 AI Model A (Trend Analyzer) - Overall Winner:** This model performs exceptionally well across every grading test. It achieves an impressive **~80.3%** accuracy score because it is highly stable. It focuses entirely on the big, logical customer patterns (like contract length and internet packages) without getting confused by minor, random background details.
-        - **👥 AI Model B (Similar-Customer Matcher):** This system trails slightly behind at **~76.2%** accuracy. It works by trying to calculate similarity scores to match new profiles with past customers. Because our customer accounts use a lot of simple 'Yes/No' options, calculating exact mathematical similarities becomes much less effective.
+        - **🏆 AI Model A (Trend Analyzer) - Overall Winner:** This model performs exceptionally well across every grading test. It achieves an impressive **~80%** accuracy score because it is highly stable. It focuses entirely on the big, logical customer patterns (like contract length and internet packages) without getting confused by minor, random background details.
+        - **👥 AI Model B (Similar-Customer Matcher):** This system trails slightly behind at **~76%** accuracy. It works by trying to calculate similarity scores to match new profiles with past customers. Because our customer accounts use a lot of simple 'Yes/No' options, calculating exact mathematical similarities becomes much less effective.
         - **🛡️ Reliability Check:** The Trend Analyzer proved to be remarkably steady, showing it genuinely understands the core triggers behind customer loyalty. On the other hand, the Matcher model got slightly overwhelmed trying to juggle too many separate account checkboxes at once—a very common limitation when computer algorithms try to calculate similarity across wide checklists.
         """
     )
